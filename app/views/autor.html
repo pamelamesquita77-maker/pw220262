@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre o Autor</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Sobre o Autor</h1>
+
+        <h2>Nome</h2>
+        <p>{{ autor.nome }}</p>
+
+        <h2>Formações</h2>
+        <ul>
+            {% for formacao in autor.formacoes %}
+                <li>{{ formacao }}</li>
+            {% endfor %}
+        </ul>
+
+        <h2>Experiências</h2>
+        <ul>
+            {% for experiencia in autor.experiencias %}
+                <li>{{ experiencia }}</li>
+            {% endfor %}
+        </ul>
+
+        <a href="/">Voltar ao início</a>
+    </main>
+</body>
+</html>
